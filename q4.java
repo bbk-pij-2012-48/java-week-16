@@ -11,7 +11,16 @@ public class q4 {
 		File src = new File(args[0]);
 		File dst = new File(args[1]);
 		
-		// test if dst exists here - if it does, program should ask whether or not to continue
+		if(dst.exists()) {
+			System.out.println("File " + dst + " already exists. Do you want to continue?");
+			String response = System.console().readLine();
+			while(!response.equals("y")) {
+				if (response.equals("n")) {
+					return;
+				}
+				response = System.console().readLine();
+			}
+		}
 		
 		BufferedReader in = null;
 		
@@ -45,4 +54,4 @@ public class q4 {
 		}
 	}
 }
-		
+

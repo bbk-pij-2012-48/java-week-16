@@ -1,3 +1,4 @@
 Tester file
 just some
 random text
+but a bit different
